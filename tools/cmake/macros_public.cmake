@@ -32,7 +32,7 @@ function(ua_generate_nodeid_header)
 
     # Set default value for output dir
     if(NOT UA_GEN_ID_OUTPUT_DIR OR "${UA_GEN_ID_OUTPUT_DIR}" STREQUAL "")
-        set(UA_GEN_ID_OUTPUT_DIR ${PROJECT_BINARY_DIR}/src_generated)
+        set(UA_GEN_ID_OUTPUT_DIR ${PROJECT_BINARY_DIR}/src_generated/open62541)
     endif()
     # Set default target prefix
     if(NOT UA_GEN_ID_TARGET_PREFIX OR "${UA_GEN_ID_TARGET_PREFIX}" STREQUAL "")
@@ -123,13 +123,12 @@ function(ua_generate_datatypes)
 
     # Set default value for output dir
     if(NOT UA_GEN_DT_OUTPUT_DIR OR "${UA_GEN_DT_OUTPUT_DIR}" STREQUAL "")
-        set(UA_GEN_DT_OUTPUT_DIR ${PROJECT_BINARY_DIR}/src_generated)
+        set(UA_GEN_DT_OUTPUT_DIR ${PROJECT_BINARY_DIR}/src_generated/open62541)
     endif()
     # Set default target prefix
     if(NOT UA_GEN_DT_TARGET_PREFIX OR "${UA_GEN_DT_TARGET_PREFIX}" STREQUAL "")
         set(UA_GEN_DT_TARGET_PREFIX "open62541-generator")
     endif()
-
 
     # ------ Add custom command and target -----
 
@@ -137,7 +136,6 @@ function(ua_generate_datatypes)
     if (UA_GEN_DT_BUILTIN)
         set(UA_GEN_DT_NO_BUILTIN "")
     endif()
-
 
     set(SELECTED_TYPES_TMP "")
     foreach(f ${UA_GEN_DT_FILES_SELECTED})
@@ -240,7 +238,7 @@ function(ua_generate_nodeset)
 
     # Set default value for output dir
     if(NOT UA_GEN_NS_OUTPUT_DIR OR "${UA_GEN_NS_OUTPUT_DIR}" STREQUAL "")
-        set(UA_GEN_NS_OUTPUT_DIR ${PROJECT_BINARY_DIR}/src_generated)
+        set(UA_GEN_NS_OUTPUT_DIR ${PROJECT_BINARY_DIR}/src_generated/open62541)
     endif()
 
     # Set default target prefix
@@ -428,7 +426,7 @@ function(ua_generate_nodeset_and_datatypes)
 
     # Set default value for output dir
     if(NOT UA_GEN_OUTPUT_DIR OR "${UA_GEN_OUTPUT_DIR}" STREQUAL "")
-        set(UA_GEN_OUTPUT_DIR ${PROJECT_BINARY_DIR}/src_generated)
+        set(UA_GEN_OUTPUT_DIR ${PROJECT_BINARY_DIR}/src_generated/open62541)
     endif()
     # Set default target prefix
     if(NOT UA_GEN_TARGET_PREFIX OR "${UA_GEN_TARGET_PREFIX}" STREQUAL "")
