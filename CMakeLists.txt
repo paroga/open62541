@@ -592,8 +592,8 @@ set(default_plugin_headers ${PROJECT_SOURCE_DIR}/plugins/include/open62541/plugi
                            ${PROJECT_SOURCE_DIR}/plugins/include/open62541/plugin/pki_default.h
                            ${PROJECT_SOURCE_DIR}/plugins/include/open62541/plugin/log_stdout.h
                            ${PROJECT_SOURCE_DIR}/plugins/include/open62541/plugin/nodestore_default.h
-                           ${PROJECT_SOURCE_DIR}/plugins/include/open62541/plugin/server_config_default.h
-                           ${PROJECT_SOURCE_DIR}/plugins/include/open62541/plugin/client_config_default.h
+                           ${PROJECT_SOURCE_DIR}/plugins/include/open62541/server_config_default.h
+                           ${PROJECT_SOURCE_DIR}/plugins/include/open62541/client_config_default.h
                            ${PROJECT_SOURCE_DIR}/plugins/include/open62541/plugin/securitypolicy_default.h
 )
 
